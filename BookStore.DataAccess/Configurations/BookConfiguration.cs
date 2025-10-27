@@ -8,7 +8,7 @@ namespace BookStore.DataAccess.Configurations
     {
         public void Configure(EntityTypeBuilder<BookEntity> builder)
         {
-            throw new NotImplementedException();
+            throw new NotImplementedException(); // dev commit
         }
     }
 }
