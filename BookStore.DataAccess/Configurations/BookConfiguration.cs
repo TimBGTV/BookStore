@@ -1,4 +1,5 @@
-﻿using BookStore.DataAccess.Entities;
+﻿using BookStore.Core.Models;
+using BookStore.DataAccess.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -8,7 +9,17 @@ namespace BookStore.DataAccess.Configurations
     {
         public void Configure(EntityTypeBuilder<BookEntity> builder)
         {
-            throw new NotImplementedException(); // dev commit
+            builder.HasKey(x => x.Id);
+
+            builder.Property(x => x.Title)
+                .HasMaxLength(Book.maxTitleLenght)
+                .IsRequired();
+
+            builder.Property(x => x.Description)
+                .IsRequired(); ;
+
+            builder.Property(x => x.Price)
+                .IsRequired(); ;
         }
     }
 }
