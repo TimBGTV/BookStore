@@ -1,5 +1,6 @@
 ﻿namespace BookStore.DataAccess.Entities
 {
+    // Класс, который представляет таблицу в базе данных.
     public class BookEntity
     {
         public Guid Id { get; set; }
